@@ -1,65 +1,35 @@
-import Image from "next/image";
+import CardPerfil from "@/components/Card"; 
 
 export default function Home() {
   return (
-    <div className="flex min-h-screen items-center justify-center bg-zinc-50 font-sans dark:bg-black">
-      <main className="flex min-h-screen w-full max-w-3xl flex-col items-center justify-between py-32 px-16 bg-white dark:bg-black sm:items-start">
-        <Image
-          className="dark:invert"
-          src="/next.svg"
-          alt="Next.js logo"
-          width={100}
-          height={20}
-          priority
-        />
-        <div className="flex flex-col items-center gap-6 text-center sm:items-start sm:text-left">
-          <h1 className="max-w-xs text-3xl font-semibold leading-10 tracking-tight text-black dark:text-zinc-50">
-            To get started, edit the page.tsx file.
-          </h1>
-          <p className="max-w-md text-lg leading-8 text-zinc-600 dark:text-zinc-400">
-            Looking for a starting point or more instructions? Head over to{" "}
-            <a
-              href="https://vercel.com/templates?framework=next.js&utm_source=create-next-app&utm_medium=appdir-template-tw&utm_campaign=create-next-app"
-              className="font-medium text-zinc-950 dark:text-zinc-50"
-            >
-              Templates
-            </a>{" "}
-            or the{" "}
-            <a
-              href="https://nextjs.org/learn?utm_source=create-next-app&utm_medium=appdir-template-tw&utm_campaign=create-next-app"
-              className="font-medium text-zinc-950 dark:text-zinc-50"
-            >
-              Learning
-            </a>{" "}
-            center.
-          </p>
-        </div>
-        <div className="flex flex-col gap-4 text-base font-medium sm:flex-row">
-          <a
-            className="flex h-12 w-full items-center justify-center gap-2 rounded-full bg-foreground px-5 text-background transition-colors hover:bg-[#383838] dark:hover:bg-[#ccc] md:w-[158px]"
-            href="https://vercel.com/new?utm_source=create-next-app&utm_medium=appdir-template-tw&utm_campaign=create-next-app"
-            target="_blank"
-            rel="noopener noreferrer"
-          >
-            <Image
-              className="dark:invert"
-              src="/vercel.svg"
-              alt="Vercel logomark"
-              width={16}
-              height={16}
-            />
-            Deploy Now
-          </a>
-          <a
-            className="flex h-12 w-full items-center justify-center rounded-full border border-solid border-black/[.08] px-5 transition-colors hover:border-transparent hover:bg-black/[.04] dark:border-white/[.145] dark:hover:bg-[#1a1a1a] md:w-[158px]"
-            href="https://nextjs.org/docs?utm_source=create-next-app&utm_medium=appdir-template-tw&utm_campaign=create-next-app"
-            target="_blank"
-            rel="noopener noreferrer"
-          >
-            Documentation
-          </a>
-        </div>
-      </main>
+    <div className="flex flex-row h-screen w-full gap-4 justify-center items-center h-screen text-center text-black dark:text-white dark:bg-black">
+       <div className="rounded-2xl bg-violet-500/20 p-4 border-rounded border-violet-400 shadow-lg hover:bg-violet-500/30 transition-all duration-300 items-center">
+        <CardPerfil
+          name="John Doe"
+          role="Software Engineer"
+          image="https://media.discordapp.net/attachments/1196590220460703867/1473508400230043758/fa969aba84e63c498441639f6fea8162.jpg?ex=69967723&is=699525a3&hm=d4f68372497f2c755ae651805cacc32b63dc0c27b4f556f430ff029c23086176&=&format=webp"
+          price="$50/hr"
+          hours="40"
+          month="June"
+          dark={false}>
+        </CardPerfil>
+      </div>
+
+      <div className="rounded-2xl bg-violet-500/20 p-4 border-rounded border-violet-400 shadow-lg hover:bg-violet-500/30 transition-all duration-300 items-center">
+      
+      <CardPerfil
+        name="Santiago bustos"
+        role="Frontend Developer"
+        image="https://media.discordapp.net/attachments/1211120524961386607/1473542301270937680/fc6c726b-894a-494c-911f-92aa32fe6745.jpg?ex=699696b5&is=69954535&hm=fa6a289ed6d4dbfef154fcc25bf682f1580aeab348a0fdb854077f7371742a73&=&format=webp&width=324&height=702"
+        price="$45/hr"
+        hours="35"
+        month="June"
+        dark={true}>
+      </CardPerfil>
+
+      </div>
+
     </div>
   );
 }
+``
